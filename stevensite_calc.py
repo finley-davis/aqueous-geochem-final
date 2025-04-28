@@ -131,7 +131,7 @@ def run_above_functions():
 
 #scatter plot, comparing logKsp values to temperature
 def plot_SI_scatter():
-    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/Data/Calculated Values/Stevensite_SI.csv')
+    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/github/CSV Data/Stevensite_SI.csv')
 
     SI = df['SI'].to_numpy()
 
@@ -158,14 +158,15 @@ def plot_SI_scatter():
     #plot each group with custom labels
     for sample_type, group in df.groupby('Location ID'):
         label = custom_labels.get(sample_type, sample_type.title())  #default to sample_type title if not found
-        plt.scatter(group['pH'], group['SI'],
+        plt.scatter(group['Location ID'], group['SI'],
                     label=label,
                     color=colors.get(sample_type)  # fallback color
                     )
-    
-    plt.xlabel('pH')
-    plt.ylabel('SI')
-    plt.title('SI of Stevensite vs pH')
+    plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label = 'Equilibrium')  # horizontal line at SI = 0
+    plt.xlabel('Sample Type', fontweight='bold')
+    plt.ylabel('SI', fontweight='bold')
+    plt.title('SI of Stevensite vs Sample Type', fontweight='bold')
+    plt.xticks(rotation=45)
     plt.legend()
     plt.grid(True)
     plt.tight_layout()

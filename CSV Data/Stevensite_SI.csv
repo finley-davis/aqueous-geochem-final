@@ -1,0 +1,59 @@
+Water Type,Sample Type,Location ID,Sample Date,Magnesium (Mg),Calcium (Ca),Silicon (Si),IAP,SI,pH
+Brackish,bore,Groundwater,2/25/14,3.1,0.2,0.00348,3.32176E-09,16.9713689,1.8
+Brackish,bore,Groundwater,2/27/14,3.3,0.1,0.00696,5.94466E-08,18.2241274,1.82
+Saline,Inactive,Inactive Porewater,2/9/14,49,15.4,0.197,157.8285653,27.6481856,6.88
+Saline,Inactive,Inactive Porewater,2/9/14,55,16.6,0.358,2424.346631,28.8345947,7.45
+Saline,Inactive,Inactive Porewater,2/9/14,46,14.4,0.158,54.00852404,27.1824623,7.33
+Saline,Inactive,Inactive Porewater,2/9/14,45,14.2,0.268,418.8748646,28.0720843,7.13
+Saline,Inactive,Inactive Porewater,2/9/14,50,15.2,0.234,332.7061287,27.9720608,6.85
+Saline,Inactive,Inactive Porewater,2/9/14,50,15.3,0.237,350.3285566,27.9944755,6.92
+Saline,Inactive,Inactive Porewater,2/10/14,21,8.2,0.696,1978.127581,28.7462543,7.54
+Saline,Inactive,Inactive Porewater,2/10/14,65,19.3,0.452,10152.15417,29.4565582,7.22
+Saline,Inactive,Inactive Porewater,2/10/14,61,17.6,0.379,4135.848561,29.0665646,7.14
+Saline,Inactive,Inactive Porewater,2/10/14,123,32.8,0.348,23912.73127,29.8286292,7.3
+Saline,Inactive,Inactive Porewater,2/10/14,132,33.7,0.39,46417.93528,30.1166858,7.31
+Saline,Inactive,Inactive Porewater,2/11/14,95,26.1,0.437,27478.19834,29.8889883,7.03
+Saline,Inactive,Inactive Porewater,2/11/14,81,20.8,0.342,6346.251988,29.2525173,6.9
+Saline,Inactive,Inactive Porewater,2/12/14,14.6,6.4,0.03859,0.006355363,23.2531404,6.72
+Saline,Inactive,Inactive Porewater,2/12/14,19.1,9.4,0.05652,0.06623967,24.2711182,6.8
+Saline,Inactive,Inactive Porewater,2/12/14,18.6,8.2,0.05293,0.046534655,24.1177765,6.88
+Saline,Inactive,Inactive Porewater,2/12/14,22.7,11.2,0.06735,0.224257609,24.8007472,6.86
+Saline,Island (Is),Undisclosed Porewater,2/16/14,132,27.1,0.358,32247.30581,29.9584934,6.8
+Saline,Active,Active Porewater,2/17/14,27,8.7,0.305,152.0919397,27.6321062,6.96
+Saline,Active,Active Porewater,2/17/14,33,10.1,0.323,347.4822719,27.9909327,6.99
+Saline,Active,Active Porewater,2/17/14,30,9.5,0.331,288.8923052,27.910736,6.91
+Saline,Active,Active Porewater,2/18/14,28,9,0.327,224.0647572,27.8003736,6.89
+Saline,Active,Active Porewater,2/18/14,28,8.7,0.309,178.0508838,27.7005441,6.93
+Saline,Active,Active Porewater,2/18/14,107,28.3,1.017,1147295.818,31.5096754,6.88
+Saline,Active,Active Porewater,2/18/14,81,21.9,1.121,736331.5623,31.3170734,6.78
+Saline,Active,Active Porewater,2/18/14,148,37.7,0.334,35186.73554,29.996379,7.04
+Saline,Active,Active Porewater,2/18/14,110,30.2,1.132,1920548.101,31.7334252,6.73
+Saline,Active,Active Porewater,2/18/14,149,38.3,0.25,11280.28547,29.5023201,7.19
+Saline,Active,Active Porewater,2/18/14,138,36.8,0.77,809463.0576,31.358197,6.76
+Saline,Active,Active Porewater,2/18/14,49,13.5,0.462,4711.616252,29.1231699,7.18
+Saline,Active,Active Porewater,2/18/14,44,12.4,0.484,4118.474458,29.0647364,7.08
+Saline,Active,Active Porewater,2/19/14,47,13.5,0.527,7069.02676,29.2993596,6.91
+Saline,Active,Active Porewater,2/19/14,56,15.7,0.636,25302.51588,29.8531637,6.72
+Saline,Active,Active Porewater,2/19/14,70,18.6,0.749,94550.29349,30.4256629,6.69
+Saline,Active,Active Porewater,2/19/14,55,15.3,0.626,22481.13717,29.8018183,6.74
+Saline,Active,Active Porewater,2/19/14,45,12.8,0.496,4863.668796,29.136964,7.08
+Saline,Active,Active Porewater,2/19/14,46,13.1,0.508,5717.151365,29.2071797,7.11
+Saline,Active,Active Porewater,2/19/14,70,18.1,0.518,21571.04638,29.7838712,7.09
+Saline,Active,Active Porewater,2/19/14,73,19.1,0.555,32278.36763,29.9589116,7.05
+Saline,Western shoreline (W),Undisclosed Porewater,2/20/14,166,30.3,0.637,635353.5305,31.2530154,6.36
+Saline,Shoreline near Swan Pond outlet (SP),Undisclosed Porewater,2/20/14,55,14,0.498,8924.460551,29.400582,6.81
+Saline,Northern shoreline (N),Undisclosed Porewater,2/23/14,91,28.3,0.477,34711.40537,29.9904722,6.74
+Saline,Northeastern shoreline (NE),Undisclosed Porewater,2/23/14,114,29.3,0.708,324970.4424,30.9618439,7
+Brine,water Boundary Lake,Surface,2/16/14,272,35.9,0.2649,80925.81833,30.3580871,7.35
+Brine,water Lake Clifton southern basin,Surface,2/25/14,315,39.9,0.62,3756337.912,32.0247647,7.18
+Saline,water Lake Clifton near boardwalk,Surface,6/26/11,29.4,17.1,0.08776,1.427885316,25.6046933,7.71
+Saline,water Lake Clifton near boardwalk,Surface,8/14/12,24.6,13.1,0.06791,0.297285592,24.9231739,7.95
+Saline,water Lake Clifton near boardwalk,Surface,8/19/12,24.7,13.6,0.06816,0.30640326,24.9362934,7.94
+Saline,water Lake Clifton near boardwalk,Surface,8/19/12,25.1,13.8,0.06795,0.317540808,24.9517995,7.99
+Saline,water Lake Clifton near boardwalk,Surface,8/20/12,24.5,13.4,0.06808,0.297420098,24.9233703,7.89
+Saline,water Harvey Estuary,Surface,2/15/14,76,15.2,0.124,88.35487505,27.3962305,8.26
+Saline,water Harvey Estuary,Surface,2/15/14,63,12.6,0.1011,22.2397177,26.7971293,7.91
+Saline,water Indian Ocean,Surface,2/15/14,55,11,0.08928,8.99928062,26.4042078,8.11
+Saline,water Lake Clifton active,Surface,2/17/14,150,38.2,0.107,385.8389778,28.0364061,7.54
+Saline,water Lake Clifton western shoreline,Surface,2/20/14,156,40.6,0.114,560.4454452,28.1985333,7.27
+Saline,water Lake Clifton inactive,Surface,2/26/14,154,40.1,0.13,911.7965338,28.4098979,7.54
