@@ -8,7 +8,7 @@
 #Ksp = (H4SiO4 ** 4) * (Mg ** 2.9) * (Ca ** 0.1) / ([H] ** 6)
 #regarding the data set, Si is the limiting element for H4SiO4
 
-#convertin [H+] to pH
+#necessary libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
