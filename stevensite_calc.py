@@ -24,6 +24,7 @@ H4SiO4 = df['Silicon (Si)'].to_numpy()  # ssuming silicon column represents H4Si
 df['Date'] = pd.to_datetime(df['Sample Date'], format='%m/%d/%y')
 temp = df['Temperature (C)'].to_numpy()
 
+
 #NOTE: Concentrations are in mmol/L
 
 #fresh
@@ -129,39 +130,42 @@ def run_above_functions():
     combined_df.to_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/Data/stevensite_combined_logKsp.csv', index=False)
 
 #scatter plot, comparing logKsp values to temperature
-def plot_logKsp_scatter():
-    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/Data/Calculated Values/stevensite_combined_logKsp.csv')
+def plot_SI_scatter():
+    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/Data/Calculated Values/Stevensite_SI.csv')
+
+    SI = df['SI'].to_numpy()
 
     #standardize Sample_Type values
-    df['Sample_Type'] = df['Sample_Type'].str.strip().str.lower()
+    #df['Sample_Type'] = df['Sample_Type'].str.strip().str.lower()
 
     #define colors and custom labels for each sample type
     colors = {
-        'pw_inactive': 'b',
-        'pw_active': 'r',
-        'boundary lake': 'g',
-        'groundwater': 'y'
+        'Inactive Pore Water': 'b',
+        'Active Pore Water': 'r',
+        'Surface Water': 'g',
+        'Groundwater': 'y'
     }
-    
+
     custom_labels = {
-        'pw_inactive': 'Inactive (PW)',
-        'pw_active': 'Active (PW)',
-        'boundary lake': 'Boundary Lake',
-        'groundwater': 'Groundwater'
+        'Inactive Pore Water': 'Inactive (PW)',
+        'Active Pore Water': 'Active (PW)',
+        'Surface Water': 'Boundary Lake',
+        'Groundwater': 'Groundwater'
     }
 
     plt.figure(figsize=(10, 6))
 
     #plot each group with custom labels
-    for sample_type, group in df.groupby('Sample_Type'):
-        label = custom_labels.get(sample_type, sample_type.title())  # Default to sample_type title if not found
-        plt.scatter(group['Temperature (C)'], group['log_Ksp'],
+    for sample_type, group in df.groupby('Location ID'):
+        label = custom_labels.get(sample_type, sample_type.title())  #default to sample_type title if not found
+        plt.scatter(group['pH'], group['SI'],
                     label=label,
-                    color=colors.get(sample_type))  
-
-    plt.xlabel('Temperature (°C)')
-    plt.ylabel('log(Ksp)')
-    plt.title('log(Ksp) of Stevensite vs Temperature')
+                    color=colors.get(sample_type)  # fallback color
+                    )
+    
+    plt.xlabel('pH')
+    plt.ylabel('SI')
+    plt.title('SI of Stevensite vs pH')
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
@@ -209,5 +213,5 @@ def plot_logKsp_boxplot():
     plt.show()
 
 
-#plot_logKsp_scatter()
+plot_SI_scatter()
 #plot_logKsp_boxplot()
