@@ -173,24 +173,29 @@ def plot_SI_scatter():
     plt.show()
 
 #box plot, comparing logKsp values to sample type
-def plot_logKsp_boxplot():
-    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/Data/Calculated Values/stevensite_combined_logKsp.csv')
+def plot_SI_boxplot():
+    """
+    Generates a boxplot comparing log(Ksp) values of Stevensite by sample type.
+    Reads data from a CSV file, processes it, and visualizes the results.
+    """
+    local_df = pd.read_csv(
+        '/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/'
+        'Final Paper/github/CSV Data/Stevensite_SI copy.csv'
+    )
 
     # Standardize Sample_Type values
-    df['Sample_Type'] = df['Sample_Type'].str.strip()
+    local_df['Sample Type'] = local_df['Sample Type'].str.strip()
 
     # Create boxplot with custom labels
-    boxplot = df.boxplot(column='log_Ksp', by='Sample_Type', grid=False)
+    local_df.boxplot(column='Location ID', by='SI', grid=False)
     plt.suptitle('')  # Suppress the default title
     plt.title('log(Ksp) of Stevensite by Sample Type')
     plt.xlabel('Sample Type')
-    plt.ylabel('log(Ksp)')
+    plt.ylabel('SI')
     plt.xticks(rotation=45)
 
-    #calculate and annotate median values
-
-
-    medians = df.groupby('Sample_Type')['log_Ksp'].median()
+    # Calculate and annotate median values
+    medians = local_df.groupby('Sample Type')['log_Ksp'].median()
 
     for i, sample_type in enumerate(medians.index):
         median_value = medians[sample_type]
@@ -208,11 +213,11 @@ def plot_logKsp_boxplot():
     plt.legend(title='*Numbers indicate median values', loc='lower right')
     plt.grid(axis='y', linestyle='--', alpha=0.7)  # grid only on y-axis
     plt.gca().set_facecolor('lightgrey')  # light grey background for the plot area
-    plt.gcf().patch.set_facecolor('white')  # white background for the figure
+    plt.gcf().patch.set_facecolor('white')  # white background for the figuddre
     plt.gcf().set_size_inches(10, 6)  # set figure size
     plt.tight_layout()
     plt.show()
 
 
-plot_SI_scatter()
-#plot_logKsp_boxplot()
+#plot_SI_scatter()
+plot_SI_boxplot()
