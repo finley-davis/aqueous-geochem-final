@@ -12,6 +12,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 #load data
 df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/Data/metadata_ioncomp.csv')
@@ -131,14 +132,10 @@ def run_above_functions():
 
 #scatter plot, comparing logKsp values to temperature
 def plot_SI_scatter():
-    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/github/CSV Data/Stevensite_SI.csv')
+    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/github/CSV Data/Stevensite_SI_phrqc.csv')
 
-    SI = df['SI'].to_numpy()
+    df['Sample Type'] = df['Sample Type'].str.strip()
 
-    #standardize Sample_Type values
-    #df['Sample_Type'] = df['Sample_Type'].str.strip().str.lower()
-
-    #define colors and custom labels for each sample type
     colors = {
         'Inactive Pore Water': 'b',
         'Active Pore Water': 'r',
@@ -155,17 +152,18 @@ def plot_SI_scatter():
 
     plt.figure(figsize=(10, 6))
 
-    #plot each group with custom labels
-    for sample_type, group in df.groupby('Location ID'):
-        label = custom_labels.get(sample_type, sample_type.title())  #default to sample_type title if not found
-        plt.scatter(group['Location ID'], group['SI'],
+
+    for sample_type, group in df.groupby('Sample Type'):
+        label = custom_labels.get(sample_type, sample_type)
+        plt.scatter([sample_type] * len(group), group['si_Sepiolite'],
                     label=label,
-                    color=colors.get(sample_type)  # fallback color
-                    )
-    plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label = 'Equilibrium')  # horizontal line at SI = 0
+                    color=colors.get(sample_type, 'gray'), 
+                    edgecolor='k')
+
+    plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label='Equilibrium')
     plt.xlabel('Sample Type', fontweight='bold')
-    plt.ylabel('SI', fontweight='bold')
-    plt.title('SI of Stevensite vs Sample Type', fontweight='bold')
+    plt.ylabel('SI (Sepiolite)', fontweight='bold')
+    plt.title('SI of Sepiolite by Sample Type', fontweight='bold')
     plt.xticks(rotation=45)
     plt.legend()
     plt.grid(True)
@@ -174,47 +172,41 @@ def plot_SI_scatter():
 
 #box plot, comparing logKsp values to sample type
 def plot_SI_boxplot():
-    """
-    Generates a boxplot comparing log(Ksp) values of Stevensite by sample type.
-    Reads data from a CSV file, processes it, and visualizes the results.
-    """
-    local_df = pd.read_csv(
-        '/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/'
-        'Final Paper/github/CSV Data/Stevensite_SI copy.csv'
-    )
+    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper'
+    '/github/CSV Data/Stevensite_SI_phrqc.csv')
 
-    # Standardize Sample_Type values
-    local_df['Sample Type'] = local_df['Sample Type'].str.strip()
 
-    # Create boxplot with custom labels
-    local_df.boxplot(column='Location ID', by='SI', grid=False)
-    plt.suptitle('')  # Suppress the default title
-    plt.title('log(Ksp) of Stevensite by Sample Type')
-    plt.xlabel('Sample Type')
-    plt.ylabel('SI')
-    plt.xticks(rotation=45)
+    df['Sample Type'] = df['Location ID'].str.strip()
 
-    # Calculate and annotate median values
-    medians = local_df.groupby('Sample Type')['log_Ksp'].median()
-
-    for i, sample_type in enumerate(medians.index):
+    plt.figure(figsize=(10, 6))
+    ax = sns.boxplot(data=df, x='Sample Type', y='si_Sepiolite', palette='pastel')
+    
+    medians = df.groupby('Sample Type')['si_Sepiolite'].median()
+    xticks = ax.get_xticks()
+    
+    for tick, label in zip(xticks, ax.get_xticklabels()):
+        sample_type = label.get_text()
         median_value = medians[sample_type]
-        plt.text(
-            i + 1.35,  # aligned with box position
-            median_value - 1.0,  # slight offset downward
+        ax.text(
+            tick, median_value - 0.3,
             f'{median_value:.2f}',
             ha='center',
             va='bottom',
-            fontsize=8,  # not too large
-            color='black',  # classic black text
-            family='serif',  # serif font (like Times New Roman)
-            style='italic'  # italic for a polished, academic feel
+            fontsize=8,
+            color='black',
+            family='serif',
+            style='italic'
         )
-    plt.legend(title='*Numbers indicate median values', loc='lower right')
-    plt.grid(axis='y', linestyle='--', alpha=0.7)  # grid only on y-axis
-    plt.gca().set_facecolor('lightgrey')  # light grey background for the plot area
-    plt.gcf().patch.set_facecolor('white')  # white background for the figuddre
-    plt.gcf().set_size_inches(10, 6)  # set figure size
+
+    plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label='Equilibrium')
+    plt.title('SI of Sepiolite by Sample Type', fontweight='bold')
+    plt.ylabel('SI (Sepiolite)', fontweight='bold')
+    plt.xlabel('Sample Type', fontweight='bold')
+    plt.xticks(rotation=45)
+    plt.legend(loc='lower right', title='*Median values shown', fontsize=8)
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    ax.set_facecolor('lightgrey')
+    plt.gcf().patch.set_facecolor('white')
     plt.tight_layout()
     plt.show()
 
