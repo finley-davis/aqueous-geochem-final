@@ -181,9 +181,9 @@ def plot_SI_boxplot():
     df = df[df['Sample Type'] != 'Undisclosed Porewater']
 
     plt.figure(figsize=(10, 6))
-    ax = sns.boxplot(data=df, x='Sample Type', y='si_talc', palette='pastel')
+    ax = sns.boxplot(data=df, x='Sample Type', y='si_Sepiolite', palette='pastel')
     
-    medians = df.groupby('Sample Type')['si_talc'].median()
+    medians = df.groupby('Sample Type')['si_Sepiolite'].median()
     xticks = ax.get_xticks()
     
     for tick, label in zip(xticks, ax.get_xticklabels()):
@@ -201,8 +201,8 @@ def plot_SI_boxplot():
         )
 
     plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label='Equilibrium')
-    plt.title('SI of Talc by Sample Type', fontweight='bold')
-    plt.ylabel('SI (Talc)', fontweight='bold')
+    plt.title('SI of Sepiolite by Sample Type', fontweight='bold')
+    plt.ylabel('SI (Sepiolite)', fontweight='bold')
     plt.xlabel('Sample Type', fontweight='bold')
     plt.xticks(rotation=45)
     plt.legend(loc='lower right', title='*Median values shown', fontsize=8)
