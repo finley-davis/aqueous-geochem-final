@@ -155,15 +155,15 @@ def plot_SI_scatter():
 
     for sample_type, group in df.groupby('Sample Type'):
         label = custom_labels.get(sample_type, sample_type)
-        plt.scatter([sample_type] * len(group), group['si_Sepiolite'],
+        plt.scatter([sample_type] * len(group), group['si_stevensite'],
                     label=label,
                     color=colors.get(sample_type, 'gray'), 
                     edgecolor='k')
 
     plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label='Equilibrium')
     plt.xlabel('Sample Type', fontweight='bold')
-    plt.ylabel('SI (Sepiolite)', fontweight='bold')
-    plt.title('SI of Sepiolite by Sample Type', fontweight='bold')
+    plt.ylabel('SI (stevensite)', fontweight='bold')
+    plt.title('SI of stevensite by Sample Type', fontweight='bold')
     plt.xticks(rotation=45)
     plt.legend()
     plt.grid(True)
@@ -181,9 +181,9 @@ def plot_SI_boxplot():
     df = df[df['Sample Type'] != 'Undisclosed Porewater']
 
     plt.figure(figsize=(10, 6))
-    ax = sns.boxplot(data=df, x='Sample Type', y='si_Sepiolite', palette='pastel')
+    ax = sns.boxplot(data=df, x='Sample Type', y='si_stevensite', palette='pastel')
     
-    medians = df.groupby('Sample Type')['si_Sepiolite'].median()
+    medians = df.groupby('Sample Type')['si_stevensite'].median()
     xticks = ax.get_xticks()
     
     for tick, label in zip(xticks, ax.get_xticklabels()):
@@ -201,8 +201,8 @@ def plot_SI_boxplot():
         )
 
     plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label='Equilibrium')
-    plt.title('SI of Sepiolite by Sample Type', fontweight='bold')
-    plt.ylabel('SI (Sepiolite)', fontweight='bold')
+    plt.title('SI of Stevensite by Sample Type', fontweight='bold')
+    plt.ylabel('SI (Stevensite)', fontweight='bold')
     plt.xlabel('Sample Type', fontweight='bold')
     plt.xticks(rotation=45)
     plt.legend(loc='lower right', title='*Median values shown', fontsize=8)
