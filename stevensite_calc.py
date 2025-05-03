@@ -19,9 +19,10 @@ from scipy.stats import linregress
 df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/Data/metadata_ioncomp.csv')
 
 #extracting columns
+#this is for original calculations, Im just keeping it here in case I need it later
 Mg = df['Magnesium (Mg)'].to_numpy()
 Ca = df['Calcium (Ca)'].to_numpy()
-H4SiO4 = df['Silicon (Si)'].to_numpy()  # ssuming silicon column represents H4SiO4
+H4SiO4 = df['Silicon (Si)'].to_numpy()  #assuming silicon column represents H4SiO4
 df['Date'] = pd.to_datetime(df['Sample Date'], format='%m/%d/%y')
 temp = df['Temperature (C)'].to_numpy()
 
@@ -189,8 +190,9 @@ def plot_SI_pH_scatter():
     plt.tight_layout()
     plt.show()
 
+#uncomment the function you want to run
 
 #plot_SI_scatter()
 #plot_SI_boxplot()
 #plot_SI_MgSi_scatter()
-plot_SI_pH_scatter()
+#plot_SI_pH_scatter()
