@@ -13,6 +13,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from scipy.stats import linregress
 
 #load data, original df
 df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/Data/metadata_ioncomp.csv')
@@ -109,6 +110,8 @@ def plot_SI_boxplot():
     plt.tight_layout()
     plt.show()
 
+#scatter plot, comparing SI values to Mg/Si ratio
+#not sure if this is the right way to do this, just testing things out
 def plot_SI_MgSi_scatter():
     df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/github/CSV Data/Mg:Si_calc.csv')
     
@@ -142,7 +145,44 @@ def plot_SI_MgSi_scatter():
     plt.tight_layout()
     plt.show()
 
+def plot_SI_pH_scatter():
+    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/github/CSV Data/Mg:Si_calc.csv')
     
+    pH = df['pH'].to_numpy()
+    SI = df['si_stevensite'].to_numpy()
+    locations = df['Location ID'].astype(str).to_numpy()
+    
+    for i in range(len(locations)):
+        if locations[i] == 'nan':
+            locations[i] = 'Groundwater'
+        else:
+            locations[i] = locations[i].strip()
+
+    unique_locations = np.unique(locations)
+    cmap = plt.cm.get_cmap('tab20', len(unique_locations))
+    colors = cmap(np.arange(len(unique_locations)))
+
+    plt.figure(figsize=(10, 6))
+
+    for i, location in enumerate(unique_locations):
+        loc_mask = locations == location
+        plt.scatter(pH[loc_mask], SI[loc_mask], color=colors[i], edgecolor='k', label=location)
+
+    # Linear regression
+    slope, intercept, r_value, p_value, std_err = linregress(pH, SI)
+    regression_line = slope * pH + intercept
+    plt.plot(pH, regression_line, color='black', linestyle='-', linewidth=1.5, label=f'Regression (R²={r_value**2:.2f})')
+
+    plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label='Equilibrium')
+    plt.xlabel('pH', fontweight='bold')
+    plt.ylabel('Saturation Index (Stevensite)', fontweight='bold')
+    plt.title('Stevensite Saturation Index vs. pH with Regression', fontweight='bold')
+    plt.legend(title='Location ID', bbox_to_anchor=(1.05, 1), loc='upper left', fontsize='small')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
 #plot_SI_scatter()
 #plot_SI_boxplot()
-plot_SI_MgSi_scatter()
+#plot_SI_MgSi_scatter()
+plot_SI_pH_scatter()
