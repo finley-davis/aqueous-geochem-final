@@ -74,6 +74,9 @@ def plot_SI_boxplot():
     #filtering out rows where 'Location ID' is 'Undisclosed Porewater'
     df = df[df['Sample Type'] != 'Undisclosed Porewater']
 
+    #displaying the number of data points used for the plot
+    print(f"Number of data points used for the plot: {len(df)}")
+
     plt.figure(figsize=(10, 6))
     ax = sns.boxplot(data=df, x='Sample Type', y='si_stevensite', palette='pastel')
     
@@ -106,5 +109,40 @@ def plot_SI_boxplot():
     plt.tight_layout()
     plt.show()
 
+def plot_SI_MgSi_scatter():
+    df = pd.read_csv('/Users/finleydavis/Desktop/Spring 25 Courses/Aqueous Geochem/Final Paper/github/CSV Data/Mg:Si_calc.csv')
+    
+    Mg_Si = df['Mg/Si Ratio'].to_numpy()
+    SI = df['si_stevensite'].to_numpy()
+    locations = df['Location ID'].astype(str).to_numpy()
+    
+    for i in range(len(locations)):
+        if locations[i] == 'nan':
+            locations[i] = 'Groundwater'
+        else:
+            locations[i] = locations[i].strip()
+
+
+    unique_locations = np.unique(locations)
+    cmap = plt.cm.get_cmap('tab20', len(unique_locations))
+    colors = cmap(np.arange(len(unique_locations)))
+
+    plt.figure(figsize=(10, 6))
+
+    for i, location in enumerate(unique_locations):
+        loc_mask = locations == location
+        plt.scatter(Mg_Si[loc_mask], SI[loc_mask], color=colors[i], edgecolor='k', label=location)
+
+    plt.axhline(0, color='black', linestyle='--', linewidth=0.8, label='Equilibrium')
+    plt.xlabel('Mg/Si Ratio', fontweight='bold')
+    plt.ylabel('Saturation Index (Stevensite)', fontweight='bold')
+    plt.title('Stevensite Saturation Index vs. Mg/Si Ratio', fontweight='bold')
+    plt.legend(title='Location ID', bbox_to_anchor=(1.05, 1), loc='upper left', fontsize='small')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+    
 #plot_SI_scatter()
 #plot_SI_boxplot()
+plot_SI_MgSi_scatter()
