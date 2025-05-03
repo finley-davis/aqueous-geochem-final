@@ -1,0 +1,1522 @@
+DATABASE C:\Program Files (x86)\USGS\Phreeqc Interactive 3.6.2-15100\database\phreeqc.dat
+SELECTED_OUTPUT 1
+    -file                 \\austin.utexas.edu\disk\geoprofiles\default\hfd263\Desktop\Final Project\Stevensite_SI_final.sel
+    -saturation_indices   Stevensite
+
+PHASES
+Stevensite
+    Si4.00Mg2.9O10(OH)2Ca0.1 + 6H+ + 4H2O = 0.1Ca++ + 4H4SiO4 + 2.9Mg++
+    log_k     25.45
+
+
+SOLUTION 1 Brackish Groundwater 
+
+    temp      20.8 
+
+    pH        7.03 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.00088 
+
+    Ca        0.0034 
+
+    Si        0.000235
+
+    #Fe(2)     0.001
+    #Al        0.001
+    #K         0.001
+    #Sr        0.001
+
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 2 Brackish Groundwater 
+
+    temp      20.8 
+
+    pH        7.03 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.00088 
+
+    Ca        0.0034 
+
+    Si        0.000234 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 3 Brackish Groundwater 
+
+    temp      20.8 
+
+    pH        7.4 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.00402 
+
+    Ca        0.0036 
+
+    Si        0.000204  
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 4 Brackish Groundwater 
+
+    temp      21 
+
+    pH        7.12 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.00092 
+
+    Ca        0.0031 
+
+    Si        0.000309  
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 5 Brackish Groundwater 
+
+    temp      21.7 
+
+    pH        7.47
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.00092 
+
+    Ca        0.0033 
+
+    Si        0.000214 
+
+    -water    1 # kg 
+
+END
+
+SOLUTION 6 Saline Inactive Porewater 
+
+    temp      25.4 
+
+    pH        6.88 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.049 
+
+    Ca        0.0154 
+
+    Si        0.000197 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 7 Saline Inactive Porewater 
+
+    temp      24.9 
+
+    pH        7.45 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.055 
+
+    Ca        0.0166 
+
+    Si        0.000358 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 8 Saline Inactive Porewater 
+
+    temp      26.0 
+
+    pH        7.33 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.046 
+
+    Ca        0.0144 
+
+    Si        0.000158 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 9 Saline Inactive Porewater 
+
+    temp      27.1 
+
+    pH        7.13 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.045 
+
+    Ca        0.0142 
+
+    Si        0.000268 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 10 Saline Inactive Porewater 
+
+    temp      23.4 
+
+    pH        6.85 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.050 
+
+    Ca        0.0152 
+
+    Si        0.000234 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 11 Saline Inactive Porewater 
+
+    temp      24.5 
+
+    pH        6.92 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.050 
+
+    Ca        0.0153 
+
+    Si        0.000237 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 12 Saline Inactive Porewater 
+
+    temp      23.4 
+
+    pH        7.54 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.021 
+
+    Ca        0.0082 
+
+    Si        0.000696 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 13 Saline Inactive Porewater 
+
+    temp      24.3 
+
+    pH        7.22 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.065 
+
+    Ca        0.0193 
+
+    Si        0.000452 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 14 Saline Inactive Porewater 
+
+    temp      24.0 
+
+    pH        7.14 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.061 
+
+    Ca        0.0176 
+
+    Si        0.000379 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 15 Saline Inactive Porewater 
+
+    temp      24.5 
+
+    pH        7.3 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.123 
+
+    Ca        0.0328 
+
+    Si        0.000348 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 16 Saline Inactive Porewater 
+
+    temp      23.8 
+
+    pH        7.31 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.132 
+
+    Ca        0.0337 
+
+    Si        0.000390 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 17 Saline Inactive Porewater 
+
+    temp      25.0 
+
+    pH        7.03 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.095 
+
+    Ca        0.0261 
+
+    Si        0.000437 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 18 Saline Inactive Porewater 
+
+    temp      25.1 
+
+    pH        6.9 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.081 
+
+    Ca        0.0208 
+
+    Si        0.000342 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 19 Saline Inactive Porewater 
+
+    temp      28.6 
+
+    pH        6.72 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.048 
+
+    Ca        0.0146 
+
+    Si        0.000323 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 20 Saline Inactive Porewater 
+
+    temp      27.6 
+
+    pH        6.8 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.072 
+
+    Ca        0.0191 
+
+    Si        0.000489 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 21 Saline Inactive Porewater 
+
+    temp      27.3 
+
+    pH        6.88 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.067 
+
+    Ca        0.0186 
+
+    Si        0.000585 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 22 Saline Inactive Porewater 
+
+    temp      28.0 
+
+    pH        6.86 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.086 
+
+    Ca        0.0227 
+
+    Si        0.000840 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 23 Saline Island (Is) Porewater 
+
+    temp      23.1 
+
+    pH        6.8 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.132 
+
+    Ca        0.0271 
+
+    Si        0.000358 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 24 Saline Active Porewater 
+
+    temp      25.1 
+
+    pH        6.96 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.027 
+
+    Ca        0.0087 
+
+    Si        0.000305 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 25 Saline Active Porewater 
+
+    temp      25.6 
+
+    pH        6.99 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.033 
+
+    Ca        0.0101 
+
+    Si        0.000323 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 26 Saline Active Porewater 
+
+    temp      25.3 
+
+    pH        6.91 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.030 
+
+    Ca        0.0095 
+
+    Si        0.000331 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 27 Saline Active Porewater 
+
+    temp      22.7 
+
+    pH        6.89 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.028 
+
+    Ca        0.0090 
+
+    Si        0.000327 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 28 Saline Active Porewater 
+
+    temp      23.0 
+
+    pH        6.93 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.028 
+
+    Ca        0.0087 
+
+    Si        0.000309 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 29 Saline Active Porewater 
+
+    temp      24.6 
+
+    pH        6.88 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.107 
+
+    Ca        0.0283 
+
+    Si        0.001017 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 30 Saline Active Porewater 
+
+    temp      25.4 
+
+    pH        6.78 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.081 
+
+    Ca        0.0219 
+
+    Si        0.001121 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 31 Saline Active Porewater 
+
+    temp      27.1 
+
+    pH        7.04 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.148 
+
+    Ca        0.0377 
+
+    Si        0.000334 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 32 Saline Active Porewater 
+
+    temp      27.0 
+
+    pH        6.73 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.110 
+
+    Ca        0.0302 
+
+    Si        0.001132 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 33 Saline Active Porewater 
+
+    temp      30.8 
+
+    pH        7.19 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.149 
+
+    Ca        0.0383 
+
+    Si        0.000250 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 34 Saline Active Porewater 
+
+    temp      29.9 
+
+    pH        6.76 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.138 
+
+    Ca        0.0368 
+
+    Si        0.000770 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 35 Saline Active Porewater 
+
+    temp      25.5 
+
+    pH        7.18 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.049 
+
+    Ca        0.0135 
+
+    Si        0.000462 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 36 Saline Active Porewater 
+
+    temp      25.5 
+
+    pH        7.08 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.044 
+
+    Ca        0.0124 
+
+    Si        0.000484 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 37 Saline Active Porewater 
+
+    temp      27.6 
+
+    pH        6.91 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.047 
+
+    Ca        0.0135 
+
+    Si        0.000527 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 38 Saline Active Porewater 
+
+    temp      27.5 
+
+    pH        6.72 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.056 
+
+    Ca        0.0157 
+
+    Si        0.000636 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 39 Saline Active Porewater 
+
+    temp      28.1 
+
+    pH        6.69 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.070 
+
+    Ca        0.0186 
+
+    Si        0.000749 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 40 Saline Active Porewater 
+
+    temp      29.4 
+
+    pH        6.74 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.055 
+
+    Ca        0.0153 
+
+    Si        0.000626 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 41 Saline Active Porewater 
+
+    temp      29.8 
+
+    pH        7.08 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.045 
+
+    Ca        0.0128 
+
+    Si        0.000496 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 42 Saline Active Porewater 
+
+    temp      28.3 
+
+    pH        7.11 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.046 
+
+    Ca        0.0131 
+
+    Si        0.000508 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 43 Saline Active Porewater 
+
+    temp      29.5 
+
+    pH        7.09 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.070 
+
+    Ca        0.0181 
+
+    Si        0.000518 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 44 Saline Active Porewater 
+
+    temp      28.2 
+
+    pH        7.05 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.073 
+
+    Ca        0.0191 
+
+    Si        0.000555 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 45 Saline Western shoreline (W) Porewater 
+
+    temp      30.8 
+
+    pH        6.36 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.166 
+
+    Ca        0.0303 
+
+    Si        0.000637 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 46 Saline Shoreline near Swan Pond outlet (SP) Porewater 
+
+    temp      25.9 
+
+    pH        6.81 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.055 
+
+    Ca        0.0140 
+
+    Si        0.000498 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 47 Saline Northern shoreline (N) Porewater 
+
+    temp      28.3 
+
+    pH        6.74 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.091 
+
+    Ca        0.0283 
+
+    Si        0.000477 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 48 Saline Northeastern shoreline (NE) Porewater 
+
+    temp      26.9 
+
+    pH        7.0 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.114 
+
+    Ca        0.0293 
+
+    Si        0.000708 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 49 Brine water Lake Clifton southern basin Surface 
+
+    temp      24.7 
+
+    pH        7.18 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.315 
+
+    Ca        0.0399 
+
+    Si        0.000620 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 50 Saline water Lake Clifton near boardwalk Surface 
+
+    temp      16.2 
+
+    pH        7.71 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.128 
+
+    Ca        0.0294 
+
+    Si        0.000325 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 51 Saline water Lake Clifton near boardwalk Surface 
+
+    temp      17.9 
+
+    pH        7.95 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.099 
+
+    Ca        0.0246 
+
+    Si        0.000270 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 52 Saline water Lake Clifton near boardwalk Surface 
+
+    temp      17.9 
+
+    pH        7.64 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.104 
+
+    Ca        0.0255 
+
+    Si        0.000232 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 53 Saline water Lake Clifton near boardwalk Surface 
+
+    temp      13.5 
+
+    pH        7.94 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.100 
+
+    Ca        0.0247 
+
+    Si        0.000216 
+
+    -water    1 # kg 
+
+END 
+
+SOLUTION 54 Saline water Lake Clifton near boardwalk Surface 
+
+    temp      17.9 
+
+    pH        7.99 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.102 
+
+    Ca        0.0251 
+
+    Si        0.000209 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 55 Saline water Lake Clifton near boardwalk Surface 
+
+    temp      16.0 
+
+    pH        7.89 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.102 
+
+    Ca        0.0245 
+
+    Si        0.000185 
+
+    -water    1 # kg 
+
+END  
+
+  
+
+SOLUTION 57 Saline water Lake Clifton active Surface 
+
+    temp      28.5 
+
+    pH        7.54 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.150 
+
+    Ca        0.0382 
+
+    Si        0.000107 
+
+    -water    1 # kg 
+
+END 
+
+  
+SOLUTION 58 Saline water Lake Clifton western shoreline Surface 
+
+    temp      33.3 
+
+    pH        7.27 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.156 
+
+    Ca        0.0406 
+
+    Si        0.000114 
+
+    -water    1 # kg 
+
+END 
+
+  
+
+SOLUTION 59 Saline water Lake Clifton inactive Surface 
+
+    temp      18.3 
+
+    pH        7.54 
+
+    pe        4 
+
+    redox     pe 
+
+    units     mol/l 
+
+    density   1 
+
+    Mg        0.154 
+
+    Ca        0.0401 
+
+    Si        0.000130 
+
+    -water    1 # kg 
+
+END 
+   
+SELECTED_OUTPUT 2
+    -file                 Stevensite_SI_final
+    -saturation_indices   Stevensite
+
