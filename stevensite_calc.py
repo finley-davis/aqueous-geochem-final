@@ -151,6 +151,7 @@ def plot_SI_pH_scatter():
     pH = df['pH'].to_numpy()
     SI = df['si_stevensite'].to_numpy()
     locations = df['Location ID'].astype(str).to_numpy()
+
     
     for i in range(len(locations)):
         if locations[i] == 'nan':
@@ -158,17 +159,23 @@ def plot_SI_pH_scatter():
         else:
             locations[i] = locations[i].strip()
 
+    mask = locations != 'Groundwater'
+    pH = pH[mask]
+    SI = SI[mask]
+    locations = locations[mask]
+
     unique_locations = np.unique(locations)
     cmap = plt.cm.get_cmap('tab20', len(unique_locations))
     colors = cmap(np.arange(len(unique_locations)))
 
     plt.figure(figsize=(10, 6))
 
+    #use this for plotting w/ out groundwater samples
     for i, location in enumerate(unique_locations):
         loc_mask = locations == location
         plt.scatter(pH[loc_mask], SI[loc_mask], color=colors[i], edgecolor='k', label=location)
 
-    # Linear regression
+    #linear regression
     slope, intercept, r_value, p_value, std_err = linregress(pH, SI)
     regression_line = slope * pH + intercept
     plt.plot(pH, regression_line, color='black', linestyle='-', linewidth=1.5, label=f'Regression (R²={r_value**2:.2f})')
@@ -181,6 +188,7 @@ def plot_SI_pH_scatter():
     plt.grid(True)
     plt.tight_layout()
     plt.show()
+
 
 #plot_SI_scatter()
 #plot_SI_boxplot()
